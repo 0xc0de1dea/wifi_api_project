@@ -24,3 +24,7 @@
 </ul>
 
 ## 📌 ERD
+![erd](https://github.com/user-attachments/assets/25382b41-042d-40c5-8622-4adaa00fed28)
+
+## 📽 시연영상
+[![Video Label](http://img.youtube.com/vi/kQwuHumUPJU/0.jpg)](https://youtu.be/kQwuHumUPJU)
