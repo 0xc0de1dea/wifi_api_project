@@ -1,0 +1,16 @@
+28-Jul-2024 03:13:58.478 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8081"]을(를) 일시 정지 중
+28-Jul-2024 03:13:58.626 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jul-2024 03:13:58.986 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc 웹 애플리케이션 [ROOT]이(가) JDBC 드라이버 [com.mysql.cj.jdbc.Driver]을(를) 등록했지만, 웹 애플리케이션이 중지될 때, 해당 JDBC 드라이버의 등록을 제거하지 못했습니다. 메모리 누수를 방지하기 위하여, 등록을 강제로 제거했습니다.
+28-Jul-2024 03:13:59.004 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads 웹 애플리케이션 [ROOT]이(가) [mysql-cj-abandoned-connection-cleanup](이)라는 이름의 쓰레드를 시작시킨 것으로 보이지만, 해당 쓰레드를 중지시키지 못했습니다. 이는 메모리 누수를 유발할 가능성이 큽니다. 해당 쓰레드의 스택 트레이스:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+28-Jul-2024 03:13:59.359 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8081"]을(를) 중지시킵니다.
+28-Jul-2024 03:13:59.393 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8081"]을(를) 소멸시킵니다.

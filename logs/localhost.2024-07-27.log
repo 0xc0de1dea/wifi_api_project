@@ -1,0 +1,726 @@
+27-Jul-2024 22:42:34.178 SEVERE [http-nio-8081-exec-5] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:127)
+		at org.apache.jsp.jsp.wifi.bookmark_002dlist_jsp._jspService(bookmark_002dlist_jsp.java:290)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		at com.ljh.mvc.bookmark.BookMarkController.showList(BookMarkController.java:46)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+27-Jul-2024 22:42:34.179 SEVERE [http-nio-8081-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [36]에서 [/jsp/wifi/bookmark-list.jsp]을(를) 처리하는 중 예외 발생
+
+33: 
+34:             for (BookMarkDTO bookmarkDTO : bookmarkList){
+35:                 BookMarkGroupDTO bookMarkGroupDTO = bookMarkGroupRepository.select(bookmarkDTO.getGROUP_ID());
+36:                 RowDTO wifiDTO = wifiRepository.select(bookmarkDTO.getWIFI_ID()); %>
+37: 
+38:             <tr class="hover">
+39:                 <td class="text-center"><%=bookmarkDTO.getID()%></td>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:60)
+		at com.ljh.mvc.bookmark.BookMarkController.showList(BookMarkController.java:46)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [36]에서 [/jsp/wifi/bookmark-list.jsp]을(를) 처리하는 중 예외 발생
+
+33: 
+34:             for (BookMarkDTO bookmarkDTO : bookmarkList){
+35:                 BookMarkGroupDTO bookMarkGroupDTO = bookMarkGroupRepository.select(bookmarkDTO.getGROUP_ID());
+36:                 RowDTO wifiDTO = wifiRepository.select(bookmarkDTO.getWIFI_ID()); %>
+37: 
+38:             <tr class="hover">
+39:                 <td class="text-center"><%=bookmarkDTO.getID()%></td>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:127)
+		at org.apache.jsp.jsp.wifi.bookmark_002dlist_jsp._jspService(bookmark_002dlist_jsp.java:290)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+27-Jul-2024 22:42:56.222 SEVERE [http-nio-8081-exec-3] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:127)
+		at org.apache.jsp.jsp.wifi.bookmark_002dlist_jsp._jspService(bookmark_002dlist_jsp.java:290)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		at com.ljh.mvc.bookmark.BookMarkController.showList(BookMarkController.java:46)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+27-Jul-2024 22:42:56.222 SEVERE [http-nio-8081-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [36]에서 [/jsp/wifi/bookmark-list.jsp]을(를) 처리하는 중 예외 발생
+
+33: 
+34:             for (BookMarkDTO bookmarkDTO : bookmarkList){
+35:                 BookMarkGroupDTO bookMarkGroupDTO = bookMarkGroupRepository.select(bookmarkDTO.getGROUP_ID());
+36:                 RowDTO wifiDTO = wifiRepository.select(bookmarkDTO.getWIFI_ID()); %>
+37: 
+38:             <tr class="hover">
+39:                 <td class="text-center"><%=bookmarkDTO.getID()%></td>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:60)
+		at com.ljh.mvc.bookmark.BookMarkController.showList(BookMarkController.java:46)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [36]에서 [/jsp/wifi/bookmark-list.jsp]을(를) 처리하는 중 예외 발생
+
+33: 
+34:             for (BookMarkDTO bookmarkDTO : bookmarkList){
+35:                 BookMarkGroupDTO bookMarkGroupDTO = bookMarkGroupRepository.select(bookmarkDTO.getGROUP_ID());
+36:                 RowDTO wifiDTO = wifiRepository.select(bookmarkDTO.getWIFI_ID()); %>
+37: 
+38:             <tr class="hover">
+39:                 <td class="text-center"><%=bookmarkDTO.getID()%></td>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:127)
+		at org.apache.jsp.jsp.wifi.bookmark_002dlist_jsp._jspService(bookmark_002dlist_jsp.java:290)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+27-Jul-2024 22:45:42.077 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:127)
+		at org.apache.jsp.jsp.wifi.bookmark_002dlist_jsp._jspService(bookmark_002dlist_jsp.java:290)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		at com.ljh.mvc.bookmark.BookMarkController.showList(BookMarkController.java:46)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+27-Jul-2024 22:45:42.077 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [36]에서 [/jsp/wifi/bookmark-list.jsp]을(를) 처리하는 중 예외 발생
+
+33: 
+34:             for (BookMarkDTO bookmarkDTO : bookmarkList){
+35:                 BookMarkGroupDTO bookMarkGroupDTO = bookMarkGroupRepository.select(bookmarkDTO.getGROUP_ID());
+36:                 RowDTO wifiDTO = wifiRepository.select(bookmarkDTO.getWIFI_ID()); %>
+37: 
+38:             <tr class="hover">
+39:                 <td class="text-center"><%=bookmarkDTO.getID()%></td>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:60)
+		at com.ljh.mvc.bookmark.BookMarkController.showList(BookMarkController.java:46)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [36]에서 [/jsp/wifi/bookmark-list.jsp]을(를) 처리하는 중 예외 발생
+
+33: 
+34:             for (BookMarkDTO bookmarkDTO : bookmarkList){
+35:                 BookMarkGroupDTO bookMarkGroupDTO = bookMarkGroupRepository.select(bookmarkDTO.getGROUP_ID());
+36:                 RowDTO wifiDTO = wifiRepository.select(bookmarkDTO.getWIFI_ID()); %>
+37: 
+38:             <tr class="hover">
+39:                 <td class="text-center"><%=bookmarkDTO.getID()%></td>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:127)
+		at org.apache.jsp.jsp.wifi.bookmark_002dlist_jsp._jspService(bookmark_002dlist_jsp.java:290)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+27-Jul-2024 22:51:48.558 SEVERE [http-nio-8081-exec-6] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:127)
+		at org.apache.jsp.jsp.wifi.bookmark_002dlist_jsp._jspService(bookmark_002dlist_jsp.java:290)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		at com.ljh.mvc.bookmark.BookMarkController.showList(BookMarkController.java:46)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+27-Jul-2024 22:51:48.558 SEVERE [http-nio-8081-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [36]에서 [/jsp/wifi/bookmark-list.jsp]을(를) 처리하는 중 예외 발생
+
+33: 
+34:             for (BookMarkDTO bookmarkDTO : bookmarkList){
+35:                 BookMarkGroupDTO bookMarkGroupDTO = bookMarkGroupRepository.select(bookmarkDTO.getGROUP_ID());
+36:                 RowDTO wifiDTO = wifiRepository.select(bookmarkDTO.getWIFI_ID()); %>
+37: 
+38:             <tr class="hover">
+39:                 <td class="text-center"><%=bookmarkDTO.getID()%></td>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:60)
+		at com.ljh.mvc.bookmark.BookMarkController.showList(BookMarkController.java:46)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [36]에서 [/jsp/wifi/bookmark-list.jsp]을(를) 처리하는 중 예외 발생
+
+33: 
+34:             for (BookMarkDTO bookmarkDTO : bookmarkList){
+35:                 BookMarkGroupDTO bookMarkGroupDTO = bookMarkGroupRepository.select(bookmarkDTO.getGROUP_ID());
+36:                 RowDTO wifiDTO = wifiRepository.select(bookmarkDTO.getWIFI_ID()); %>
+37: 
+38:             <tr class="hover">
+39:                 <td class="text-center"><%=bookmarkDTO.getID()%></td>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:127)
+		at org.apache.jsp.jsp.wifi.bookmark_002dlist_jsp._jspService(bookmark_002dlist_jsp.java:290)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+27-Jul-2024 22:54:50.707 SEVERE [http-nio-8081-exec-10] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:127)
+		at org.apache.jsp.jsp.wifi.bookmark_002dlist_jsp._jspService(bookmark_002dlist_jsp.java:291)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		at com.ljh.mvc.bookmark.BookMarkController.showList(BookMarkController.java:46)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+27-Jul-2024 22:54:50.707 SEVERE [http-nio-8081-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [37]에서 [/jsp/wifi/bookmark-list.jsp]을(를) 처리하는 중 예외 발생
+
+34:             for (BookMarkDTO bookmarkDTO : bookmarkList){
+35:                 BookMarkGroupDTO bookMarkGroupDTO = bookMarkGroupRepository.select(bookmarkDTO.getGROUP_ID());
+36:                 System.out.println(bookmarkDTO.getWIFI_ID());
+37:                 RowDTO wifiDTO = wifiRepository.select(bookmarkDTO.getWIFI_ID());
+38:         %>
+39: 
+40:             <tr class="hover">
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:60)
+		at com.ljh.mvc.bookmark.BookMarkController.showList(BookMarkController.java:46)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [37]에서 [/jsp/wifi/bookmark-list.jsp]을(를) 처리하는 중 예외 발생
+
+34:             for (BookMarkDTO bookmarkDTO : bookmarkList){
+35:                 BookMarkGroupDTO bookMarkGroupDTO = bookMarkGroupRepository.select(bookmarkDTO.getGROUP_ID());
+36:                 System.out.println(bookmarkDTO.getWIFI_ID());
+37:                 RowDTO wifiDTO = wifiRepository.select(bookmarkDTO.getWIFI_ID());
+38:         %>
+39: 
+40:             <tr class="hover">
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:127)
+		at org.apache.jsp.jsp.wifi.bookmark_002dlist_jsp._jspService(bookmark_002dlist_jsp.java:291)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+27-Jul-2024 22:58:44.610 SEVERE [http-nio-8081-exec-5] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:127)
+		at org.apache.jsp.jsp.wifi.bookmark_002dlist_jsp._jspService(bookmark_002dlist_jsp.java:291)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		at com.ljh.mvc.bookmark.BookMarkController.showList(BookMarkController.java:46)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+27-Jul-2024 22:58:44.610 SEVERE [http-nio-8081-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [37]에서 [/jsp/wifi/bookmark-list.jsp]을(를) 처리하는 중 예외 발생
+
+34:             for (BookMarkDTO bookmarkDTO : bookmarkList){
+35:                 BookMarkGroupDTO bookMarkGroupDTO = bookMarkGroupRepository.select(bookmarkDTO.getGROUP_ID());
+36:                 System.out.println(bookmarkDTO.getWIFI_ID());
+37:                 RowDTO wifiDTO = wifiRepository.select(bookmarkDTO.getWIFI_ID());
+38:         %>
+39: 
+40:             <tr class="hover">
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:60)
+		at com.ljh.mvc.bookmark.BookMarkController.showList(BookMarkController.java:46)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:39)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [37]에서 [/jsp/wifi/bookmark-list.jsp]을(를) 처리하는 중 예외 발생
+
+34:             for (BookMarkDTO bookmarkDTO : bookmarkList){
+35:                 BookMarkGroupDTO bookMarkGroupDTO = bookMarkGroupRepository.select(bookmarkDTO.getGROUP_ID());
+36:                 System.out.println(bookmarkDTO.getWIFI_ID());
+37:                 RowDTO wifiDTO = wifiRepository.select(bookmarkDTO.getWIFI_ID());
+38:         %>
+39: 
+40:             <tr class="hover">
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:127)
+		at org.apache.jsp.jsp.wifi.bookmark_002dlist_jsp._jspService(bookmark_002dlist_jsp.java:291)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more

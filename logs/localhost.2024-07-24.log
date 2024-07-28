@@ -1,0 +1,2570 @@
+24-Jul-2024 19:27:35.987 SEVERE [http-nio-8081-exec-2] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.net.ConnectException: Connection refused: no further information
+		at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+		at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+		at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+		at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+		at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+		at java.base/java.net.Socket.connect(Socket.java:751)
+		at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+		at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+		at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+		at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:850)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:831)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+		at com.ljh.util.Mysql.getConnection(Mysql.java:71)
+		at com.ljh.util.Mysql.insert(Mysql.java:190)
+		at com.ljh.mvc.wifi.WifiRepository.insert(WifiRepository.java:43)
+		at com.ljh.mvc.wifi.WifiService.insert(WifiService.java:16)
+		at com.ljh.mvc.wifi.WifiController.loadWifiInformation(WifiController.java:68)
+		at org.apache.jsp.jsp.wifi.load_jsp._jspService(load_jsp.java:234)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showLoad(WifiController.java:81)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:28)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 19:27:35.987 SEVERE [http-nio-8081-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [8]에서 [/jsp/wifi/load.jsp]을(를) 처리하는 중 예외 발생
+
+5: 
+6: <%
+7:     WifiController wifiController = new WifiController();
+8:     int loadedCnt = wifiController.loadWifiInformation();
+9: %>
+10: 
+11: <% if (loadedCnt > 0) { %>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showLoad(WifiController.java:81)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:28)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [8]에서 [/jsp/wifi/load.jsp]을(를) 처리하는 중 예외 발생
+
+5: 
+6: <%
+7:     WifiController wifiController = new WifiController();
+8:     int loadedCnt = wifiController.loadWifiInformation();
+9: %>
+10: 
+11: <% if (loadedCnt > 0) { %>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+		at com.ljh.util.Mysql.getConnection(Mysql.java:75)
+		at com.ljh.util.Mysql.insert(Mysql.java:190)
+		at com.ljh.mvc.wifi.WifiRepository.insert(WifiRepository.java:43)
+		at com.ljh.mvc.wifi.WifiService.insert(WifiService.java:16)
+		at com.ljh.mvc.wifi.WifiController.loadWifiInformation(WifiController.java:68)
+		at org.apache.jsp.jsp.wifi.load_jsp._jspService(load_jsp.java:234)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+	Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+		at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+		at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+		at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+		at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+		at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+		at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+		at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+		at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:850)
+		at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:831)
+		at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+		at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+		at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+		at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+		at com.ljh.util.Mysql.getConnection(Mysql.java:71)
+		... 47 more
+	Caused by: java.net.ConnectException: Connection refused: no further information
+		at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+		at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+		at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+		at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+		at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+		at java.base/java.net.Socket.connect(Socket.java:751)
+		at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+		at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+		... 56 more
+24-Jul-2024 20:06:49.567 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Double.doubleValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.selectAll(WifiRepository.java:109)
+		at com.ljh.mvc.wifi.WifiRepository.getCount(WifiRepository.java:134)
+		at com.ljh.mvc.wifi.WifiService.getCount(WifiService.java:24)
+		at com.ljh.mvc.wifi.WifiController.loadWifiInformation(WifiController.java:60)
+		at org.apache.jsp.jsp.wifi.load_jsp._jspService(load_jsp.java:234)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showLoad(WifiController.java:87)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:28)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 20:06:49.568 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [8]에서 [/jsp/wifi/load.jsp]을(를) 처리하는 중 예외 발생
+
+5: 
+6: <%
+7:     WifiController wifiController = new WifiController();
+8:     int loadedCnt = wifiController.loadWifiInformation();
+9: %>
+10: 
+11: <% if (loadedCnt > 0) { %>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showLoad(WifiController.java:87)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:28)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [8]에서 [/jsp/wifi/load.jsp]을(를) 처리하는 중 예외 발생
+
+5: 
+6: <%
+7:     WifiController wifiController = new WifiController();
+8:     int loadedCnt = wifiController.loadWifiInformation();
+9: %>
+10: 
+11: <% if (loadedCnt > 0) { %>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Double.doubleValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.selectAll(WifiRepository.java:109)
+		at com.ljh.mvc.wifi.WifiRepository.getCount(WifiRepository.java:134)
+		at com.ljh.mvc.wifi.WifiService.getCount(WifiService.java:24)
+		at com.ljh.mvc.wifi.WifiController.loadWifiInformation(WifiController.java:60)
+		at org.apache.jsp.jsp.wifi.load_jsp._jspService(load_jsp.java:234)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 20:09:46.378 SEVERE [Catalina-utility-1] org.apache.catalina.core.StandardContext.listenerStart Context initialized 이벤트를 [com.ljh.listener.InitListener] 클래스의 인스턴스인 리스너에 전송하는 동안 예외 발생
+	java.lang.NoClassDefFoundError: com/ljh/mvc/wifi/WifiRepository
+		at com.ljh.container.Container.init(Container.java:33)
+		at com.ljh.App.init(App.java:11)
+		at com.ljh.listener.InitListener.contextInitialized(InitListener.java:14)
+		at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3997)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4424)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3209)
+		at org.apache.catalina.loader.WebappLoader.backgroundProcess(WebappLoader.java:234)
+		at org.apache.catalina.core.StandardContext.backgroundProcess(StandardContext.java:4779)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: java.lang.ClassNotFoundException: com.ljh.mvc.wifi.WifiRepository
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1332)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1144)
+		... 20 more
+24-Jul-2024 21:05:38.191 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.util.MissingFormatArgumentException: Format specifier '%s'
+		at java.base/java.util.Formatter.format(Formatter.java:2790)
+		at java.base/java.util.Formatter.format(Formatter.java:2728)
+		at java.base/java.lang.String.formatted(String.java:4448)
+		at com.ljh.Rq.getActionPath(Rq.java:140)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:26)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 21:07:47.665 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.util.MissingFormatArgumentException: Format specifier '%s'
+		at java.base/java.util.Formatter.format(Formatter.java:2790)
+		at java.base/java.util.Formatter.format(Formatter.java:2728)
+		at java.base/java.lang.String.formatted(String.java:4448)
+		at com.ljh.Rq.getActionPath(Rq.java:141)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:26)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:37:43.273 SEVERE [http-nio-8081-exec-2] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String, int)" because "connection" is null
+		at com.ljh.util.SecSql.getPreparedStatement(SecSql.java:45)
+		at com.ljh.util.Mysql.insert(Mysql.java:190)
+		at com.ljh.mvc.history.HistoryRepository.insert(HistoryRepository.java:22)
+		at com.ljh.mvc.wifi.WifiRepository.getNearWifiLimit20(WifiRepository.java:51)
+		at org.apache.jsp.jsp.wifi.main_jsp._jspService(main_jsp.java:332)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showMain(WifiController.java:83)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:27)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:37:43.274 SEVERE [http-nio-8081-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [80]에서 [/jsp/wifi/main.jsp]을(를) 처리하는 중 예외 발생
+
+77:                 if (lat.equals(initLoc) || lnt.equals(initLoc)){ %>
+78:             <td class="text-center text-3xl" colspan="17">위치 정보를 입력하신 후에 조회해 주세요.</td>
+79:             <% } else { %>
+80:                 <% List<RowDTO> rows = WifiRepository.getNearWifiLimit20(lat, lnt);
+81:                 int idx = 0;
+82: 
+83:                 for (RowDTO row : rows){ %>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showMain(WifiController.java:83)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:27)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [80]에서 [/jsp/wifi/main.jsp]을(를) 처리하는 중 예외 발생
+
+77:                 if (lat.equals(initLoc) || lnt.equals(initLoc)){ %>
+78:             <td class="text-center text-3xl" colspan="17">위치 정보를 입력하신 후에 조회해 주세요.</td>
+79:             <% } else { %>
+80:                 <% List<RowDTO> rows = WifiRepository.getNearWifiLimit20(lat, lnt);
+81:                 int idx = 0;
+82: 
+83:                 for (RowDTO row : rows){ %>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String, int)" because "connection" is null
+		at com.ljh.util.SecSql.getPreparedStatement(SecSql.java:45)
+		at com.ljh.util.Mysql.insert(Mysql.java:190)
+		at com.ljh.mvc.history.HistoryRepository.insert(HistoryRepository.java:22)
+		at com.ljh.mvc.wifi.WifiRepository.getNearWifiLimit20(WifiRepository.java:51)
+		at org.apache.jsp.jsp.wifi.main_jsp._jspService(main_jsp.java:332)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:40:37.649 SEVERE [http-nio-8081-exec-5] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:40:37.649 SEVERE [http-nio-8081-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     long id = rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     long id = rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:42:04.575 SEVERE [Catalina-utility-1] org.apache.catalina.core.StandardContext.listenerStart Context initialized 이벤트를 [com.ljh.listener.InitListener] 클래스의 인스턴스인 리스너에 전송하는 동안 예외 발생
+	java.lang.NoClassDefFoundError: com/ljh/mvc/wifi/WifiRepository
+		at com.ljh.container.Container.init(Container.java:33)
+		at com.ljh.App.init(App.java:11)
+		at com.ljh.listener.InitListener.contextInitialized(InitListener.java:14)
+		at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3997)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4424)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3209)
+		at org.apache.catalina.loader.WebappLoader.backgroundProcess(WebappLoader.java:234)
+		at org.apache.catalina.core.StandardContext.backgroundProcess(StandardContext.java:4779)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: java.lang.ClassNotFoundException: com.ljh.mvc.wifi.WifiRepository
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1332)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1144)
+		... 20 more
+24-Jul-2024 22:43:10.578 SEVERE [http-nio-8081-exec-3] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/jsp/wifi/detail.jsp]의 [12] 행에서 오류가 발생했습니다.
+The method select(int) in the type WifiRepository is not applicable for the arguments (long)
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     long id = rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:81)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:543)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:43:10.579 SEVERE [http-nio-8081-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/jsp/wifi/detail.jsp]의 [12] 행에서 오류가 발생했습니다.
+The method select(int) in the type WifiRepository is not applicable for the arguments (long)
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     long id = rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/jsp/wifi/detail.jsp]의 [12] 행에서 오류가 발생했습니다.
+The method select(int) in the type WifiRepository is not applicable for the arguments (long)
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     long id = rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:81)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:543)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+24-Jul-2024 22:44:05.362 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at com.ljh.util.SecSql.getPreparedStatement(SecSql.java:47)
+		at com.ljh.util.Mysql.selectRows(Mysql.java:97)
+		at com.ljh.util.Mysql.selectRow(Mysql.java:83)
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:99)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:44:05.362 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at com.ljh.util.SecSql.getPreparedStatement(SecSql.java:47)
+		at com.ljh.util.Mysql.selectRows(Mysql.java:97)
+		at com.ljh.util.Mysql.selectRow(Mysql.java:83)
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:99)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:44:06.629 SEVERE [http-nio-8081-exec-5] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:44:06.629 SEVERE [http-nio-8081-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:49:18.498 SEVERE [http-nio-8081-exec-5] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Double.doubleValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:49:18.498 SEVERE [http-nio-8081-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Double.doubleValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:50:05.797 SEVERE [http-nio-8081-exec-4] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:50:05.798 SEVERE [http-nio-8081-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:51:10.538 SEVERE [http-nio-8081-exec-5] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:51:10.539 SEVERE [http-nio-8081-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:51:33.879 SEVERE [http-nio-8081-exec-7] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:51:33.880 SEVERE [http-nio-8081-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:51:41.457 SEVERE [http-nio-8081-exec-9] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:51:41.458 SEVERE [http-nio-8081-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:52:01.300 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:52:01.300 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [12]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+9:     Rq rq = new Rq(request, response);
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     RowDTO rowDTO = wifiRepository.select(id);
+13: %>
+14: 
+15: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:250)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:52:48.285 SEVERE [http-nio-8081-exec-3] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:251)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:52:48.285 SEVERE [http-nio-8081-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [13]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     System.out.println(id);
+13:     RowDTO rowDTO = wifiRepository.select(id);
+14: %>
+15: 
+16: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [13]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     System.out.println(id);
+13:     RowDTO rowDTO = wifiRepository.select(id);
+14: %>
+15: 
+16: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:251)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:53:35.608 SEVERE [http-nio-8081-exec-4] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:251)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:53:35.608 SEVERE [http-nio-8081-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [13]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     System.out.println(id);
+13:     RowDTO rowDTO = wifiRepository.select(id);
+14: %>
+15: 
+16: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:59)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [13]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     System.out.println(id);
+13:     RowDTO rowDTO = wifiRepository.select(id);
+14: %>
+15: 
+16: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:57)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:251)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:54:44.323 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:251)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:54:44.323 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [13]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     System.out.println(id);
+13:     RowDTO rowDTO = wifiRepository.select(id);
+14: %>
+15: 
+16: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:60)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [13]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     System.out.println(id);
+13:     RowDTO rowDTO = wifiRepository.select(id);
+14: %>
+15: 
+16: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:251)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:56:10.405 SEVERE [http-nio-8081-exec-2] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:251)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:56:10.406 SEVERE [http-nio-8081-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [13]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     System.out.println(id);
+13:     RowDTO rowDTO = wifiRepository.select(id);
+14: %>
+15: 
+16: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:60)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [13]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     System.out.println(id);
+13:     RowDTO rowDTO = wifiRepository.select(id);
+14: %>
+15: 
+16: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:251)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 22:57:43.174 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:251)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 22:57:43.174 SEVERE [http-nio-8081-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [13]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     System.out.println(id);
+13:     RowDTO rowDTO = wifiRepository.select(id);
+14: %>
+15: 
+16: <table>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:60)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:91)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [13]에서 [/jsp/wifi/detail.jsp]을(를) 처리하는 중 예외 발생
+
+10:     WifiRepository wifiRepository = new WifiRepository();
+11:     int id = (int) rq.getLongPathValueByIndex(1, 0);
+12:     System.out.println(id);
+13:     RowDTO rowDTO = wifiRepository.select(id);
+14: %>
+15: 
+16: <table>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:102)
+		at org.apache.jsp.jsp.wifi.detail_jsp._jspService(detail_jsp.java:251)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 23:05:20.538 SEVERE [http-nio-8081-exec-2] org.apache.catalina.core.ApplicationDispatcher.invoke 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String, int)" because "connection" is null
+		at com.ljh.util.SecSql.getPreparedStatement(SecSql.java:45)
+		at com.ljh.util.Mysql.insert(Mysql.java:190)
+		at com.ljh.mvc.history.HistoryRepository.insert(HistoryRepository.java:22)
+		at com.ljh.mvc.wifi.WifiRepository.getNearWifiLimit20(WifiRepository.java:51)
+		at org.apache.jsp.jsp.wifi.main_jsp._jspService(main_jsp.java:332)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		at com.ljh.mvc.wifi.WifiController.showMain(WifiController.java:83)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:27)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+24-Jul-2024 23:05:20.538 SEVERE [http-nio-8081-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.RuntimeException: org.apache.jasper.JasperException: 행 [80]에서 [/jsp/wifi/main.jsp]을(를) 처리하는 중 예외 발생
+
+77:                 if (lat.equals(initLoc) || lnt.equals(initLoc)){ %>
+78:             <td class="text-center text-3xl" colspan="17">위치 정보를 입력하신 후에 조회해 주세요.</td>
+79:             <% } else { %>
+80:                 <% List<RowDTO> rows = WifiRepository.getNearWifiLimit20(lat, lnt);
+81:                 int idx = 0;
+82: 
+83:                 for (RowDTO row : rows){ %>
+
+
+Stacktrace:
+		at com.ljh.Rq.view(Rq.java:60)
+		at com.ljh.mvc.wifi.WifiController.showMain(WifiController.java:83)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:27)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: org.apache.jasper.JasperException: 행 [80]에서 [/jsp/wifi/main.jsp]을(를) 처리하는 중 예외 발생
+
+77:                 if (lat.equals(initLoc) || lnt.equals(initLoc)){ %>
+78:             <td class="text-center text-3xl" colspan="17">위치 정보를 입력하신 후에 조회해 주세요.</td>
+79:             <% } else { %>
+80:                 <% List<RowDTO> rows = WifiRepository.getNearWifiLimit20(lat, lnt);
+81:                 int idx = 0;
+82: 
+83:                 for (RowDTO row : rows){ %>
+
+
+Stacktrace:
+		at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:599)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:488)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+		at com.ljh.Rq.view(Rq.java:58)
+		... 26 more
+	Caused by: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String, int)" because "connection" is null
+		at com.ljh.util.SecSql.getPreparedStatement(SecSql.java:45)
+		at com.ljh.util.Mysql.insert(Mysql.java:190)
+		at com.ljh.mvc.history.HistoryRepository.insert(HistoryRepository.java:22)
+		at com.ljh.mvc.wifi.WifiRepository.getNearWifiLimit20(WifiRepository.java:51)
+		at org.apache.jsp.jsp.wifi.main_jsp._jspService(main_jsp.java:332)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:67)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		... 39 more
+24-Jul-2024 23:28:44.639 SEVERE [Catalina-utility-1] org.apache.catalina.core.StandardContext.listenerStart Context initialized 이벤트를 [com.ljh.listener.InitListener] 클래스의 인스턴스인 리스너에 전송하는 동안 예외 발생
+	java.lang.NoClassDefFoundError: com/ljh/mvc/bookmarkgroup/BookMarkGroupRepository
+		at com.ljh.container.Container.init(Container.java:36)
+		at com.ljh.App.init(App.java:11)
+		at com.ljh.listener.InitListener.contextInitialized(InitListener.java:14)
+		at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3997)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4424)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3209)
+		at org.apache.catalina.loader.WebappLoader.backgroundProcess(WebappLoader.java:234)
+		at org.apache.catalina.core.StandardContext.backgroundProcess(StandardContext.java:4779)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+	Caused by: java.lang.ClassNotFoundException: com.ljh.mvc.bookmarkgroup.BookMarkGroupRepository
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1332)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1144)
+		... 20 more
+24-Jul-2024 23:46:30.363 SEVERE [http-nio-8081-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke 경로가 []인 컨텍스트의 서블릿 [com.ljh.servlet.MainServlet]을(를) 위한 Servlet.service() 호출이 예외를 발생시켰습니다.
+	java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at com.ljh.util.SecSql.getPreparedStatement(SecSql.java:47)
+		at com.ljh.util.Mysql.selectRows(Mysql.java:97)
+		at com.ljh.util.Mysql.selectRow(Mysql.java:83)
+		at com.ljh.mvc.wifi.WifiRepository.select(WifiRepository.java:99)
+		at com.ljh.mvc.wifi.WifiService.select(WifiService.java:28)
+		at com.ljh.mvc.wifi.WifiController.showDetail(WifiController.java:93)
+		at com.ljh.servlet.MainServlet.doGet(MainServlet.java:29)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)

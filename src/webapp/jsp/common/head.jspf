@@ -1,0 +1,107 @@
+<%@ page language="java" contentType="text/html; chatset=UTF-8" pageEncoding="UTF-8"%>
+
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 모바일에서 디자인이 축소되지 않게 하기 위한 코드 -->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wifi Project</title>
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 데이지 UI 불러오기 -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- 테일윈드 불러오기 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 폰트어썸 불러오기 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        th {
+            border : solid 1px #EFFBEF;
+            background: #01DF3A;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<style>
+    @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    html > body {
+        font-family: 'GmarketSansMedium';
+        text-underline-position: under;
+    }
+</style>
+
+<header class="on-bar h-[80px] bg-[#F2F2F2]">
+    <div class="container mx-auto px-3">
+        <a href="/wifi/main" class="logo flex h-full items-center px-3 gap-x-1">
+            <div class="mt-[15px]">
+                <span class="text-2xl">
+                    <i class="fa-solid fa-wifi"></i>
+                </span>
+                <span class="font-bold text-2xl">
+                    와이파이 정보
+                </span>
+            </div>
+        </a>
+        <nav>
+            <ul class="flex h-full mt-[5px]">
+                <li>
+                    <a href="/wifi/main" class="flex h-full items-center px-[20px] hover:text-underline hover:text-white gap-x-1">
+                        <span>
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span>홈</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/wifi/history" class="flex h-full items-center px-[20px] hover:text-underline hover:text-white gap-x-1">
+                        <span>
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </span>
+                        <span>위치 히스토리 목록</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/wifi/load" class="flex h-full items-center px-[20px] hover:text-underline hover:text-white gap-x-1">
+                        <span>
+                            <i class="fa-solid fa-download"></i>
+                        </span>
+                        <span>Open APi 와이파이 정보 가져오기</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/wifi/bookmark/list" class="flex h-full items-center px-[20px] hover:text-underline hover:text-white gap-x-1">
+                        <span>
+                            <i class="fa-solid fa-bookmark"></i>
+                        </span>
+                        <span>북마크 목록 보기</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/wifi/bookmarkgroup/list" class="flex h-full items-center px-[20px] hover:text-underline hover:text-white gap-x-1">
+                        <span>
+                            <i class="fa-solid fa-book-bookmark"></i>
+                        </span>
+                        <span>북마크 그룹 관리</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
